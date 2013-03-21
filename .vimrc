@@ -74,8 +74,8 @@ set splitbelow
 set splitright
 
 " Native shortcuts/mappings
-map <leader>2 :setlocal shiftwidth=2<CR>:setlocal tabstop=2<CR>
-map <leader>4 :setlocal shiftwidth=4<CR>:setlocal tabstop=4<CR>
+map <leader>2 :setlocal shiftwidth=2<CR>:setlocal tabstop=2<CR>:setlocal softtabstop=2<CR>
+map <leader>4 :setlocal shiftwidth=4<CR>:setlocal tabstop=4<CR>:setlocal softtabstop=4<CR>
 map <leader>n :nohl<CR>
 map <leader>p :set paste!<CR>
 map <leader>s :shell<CR>
