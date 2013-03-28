@@ -23,8 +23,8 @@ syntax enable
 autocmd BufReadPost * match BadWhitespace /\s\+$/
 autocmd InsertEnter * match BadWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match BadWhitespace /\s\+$/
-autocmd FileType javascript syntax keyword javaScriptGlobal navigator
-autocmd FileType javascript syntax keyword javaScriptNothing status event
+autocmd FileType javascript syntax keyword javaScriptGlobal navigator exports
+autocmd FileType javascript syntax keyword javaScriptNothing event static status
 autocmd FileType javascript syntax keyword javaScriptReserved void
 autocmd FileType javascript syntax keyword javaScriptSpecial console
 autocmd FileType javascript highlight link javaScriptMessage PreProc
