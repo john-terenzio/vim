@@ -85,11 +85,9 @@ nmap j gj
 nmap k gk
 
 " Ctrl-P settings
-let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.vim/tmp/ctrlp'
 let g:ctrlp_max_height = 20
 let g:ctrlp_working_path_mode = 0
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc,*.gif,*.jpg,*.jpeg,*.png,.DS_Store
 
 " NERDTree settings
 map <leader>d :NERDTree<CR>
