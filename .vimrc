@@ -23,10 +23,12 @@ syntax enable
 autocmd BufReadPost * match BadWhitespace /\s\+$/
 autocmd InsertEnter * match BadWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match BadWhitespace /\s\+$/
-autocmd FileType javascript syntax keyword javaScriptGlobal navigator exports
-autocmd FileType javascript syntax keyword javaScriptNothing event static status
+autocmd FileType javascript syntax keyword javaScriptIdentifier prototype
+autocmd FileType javascript syntax keyword javaScriptGlobal document exports location navigator
+autocmd FileType javascript syntax keyword javaScriptNothing event parent top self static status
+autocmd FileType javascript syntax keyword javaScriptNull NaN
 autocmd FileType javascript syntax keyword javaScriptReserved void
-autocmd FileType javascript syntax keyword javaScriptSpecial console
+autocmd FileType javascript syntax keyword javaScriptMessage console
 autocmd FileType javascript highlight link javaScriptMessage PreProc
 autocmd FileType javascript highlight link javaScriptNull Function
 autocmd FileType javascript highlight link javaScriptNumber Number
@@ -42,6 +44,7 @@ highlight BadWhitespace ctermbg=1
 highlight Error cterm=none
 highlight ErrorMsg cterm=none
 highlight IncSearch ctermbg=0
+highlight javaScriptGlobal ctermfg=3
 highlight MatchParen ctermfg=none ctermbg=none cterm=underline
 highlight NonText ctermfg=8
 highlight Search ctermbg=0
