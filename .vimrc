@@ -93,8 +93,9 @@ nmap k gk
 
 " Ctrl-P settings
 let g:ctrlp_cache_dir = $HOME.'/.vim/tmp/ctrlp'
+let g:ctrlp_lazy_update = 100
 let g:ctrlp_max_height = 20
-let g:ctrlp_user_command = 'find %s -type f | grep -i -v -P "(\.(gif|gz|ico|jpg|jpeg|png|psd|pyc|zip)$)|(/\.)"'
+let g:ctrlp_user_command = 'find %s -type f | grep -i -v -P "(\.(eot|gif|gz|ico|jpg|jpeg|otf|png|psd|pyc|svg|ttf|woff|zip)$)|(/\.)|((^|\/)tmp\/)"'
 let g:ctrlp_working_path_mode = 0
 
 " NERDTree settings
