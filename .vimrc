@@ -16,31 +16,19 @@ set viminfo+=n~/.vim/viminfo
 set wildmenu
 
 " Jump to last position when reopening a file
-au BufReadPost * exe "normal! `\""
+autocmd BufReadPost * execute "normal! `\""
 
-" Syntax highlighting tweaks
+" Syntax highlighting
 syntax enable
+autocmd FileType c,javascript,ruby,php,python setlocal colorcolumn=80
 autocmd BufReadPost * match BadWhitespace /\s\+$/
 autocmd InsertEnter * match BadWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match BadWhitespace /\s\+$/
-autocmd FileType javascript syntax keyword javaScriptGlobal document exports
-autocmd FileType javascript syntax keyword javaScriptMessage console
-autocmd FileType javascript syntax keyword javaScriptNothing abstract boolean byte char class const double enum event export extends final float goto implements import int interface location long native package parent private protected public self short static super synchronized throws top transient volatile
-autocmd FileType javascript syntax keyword javaScriptNull NaN
-autocmd FileType javascript syntax keyword javaScriptReserved prototype void
-autocmd FileType javascript syntax keyword javaScriptType Float32Array Float64Array Int8Array Int16Array Int32Array Uint8Array Uint16Array Uint32Array
-autocmd FileType javascript highlight link javaScriptGlobal javaScriptType
-autocmd FileType javascript highlight link javaScriptMessage PreProc
-autocmd FileType javascript highlight link javaScriptNull Boolean
-autocmd FileType javascript highlight link javaScriptNumber Number
-autocmd FileType python syntax keyword pythonBoolean True False
-autocmd FileType python highlight link pythonBoolean Number
-autocmd FileType c,javascript,ruby,php,python setlocal colorcolumn=80
 
 " Solarized colors w/ some tweaks
 colorscheme solarized
 set background=dark
-set fcs+=vert:\ ,
+set fillchars+=vert:\ ,
 highlight BadWhitespace ctermbg=1
 highlight Error cterm=none
 highlight ErrorMsg cterm=none
@@ -54,6 +42,12 @@ highlight StatusLineNC cterm=none
 highlight VertSplit ctermfg=8 ctermbg=8
 highlight Visual ctermbg=0
 highlight WarningMsg ctermfg=3 cterm=none
+
+" Syntax highlighting tweaks
+let syntax_tweaks = expand('~/.vim/syntax_tweaks.vim')
+if filereadable(syntax_tweaks)
+  execute 'source' syntax_tweaks
+endif
 
 " Indentation
 set autoindent
