@@ -23,14 +23,15 @@ syntax enable
 autocmd BufReadPost * match BadWhitespace /\s\+$/
 autocmd InsertEnter * match BadWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match BadWhitespace /\s\+$/
-autocmd FileType javascript syntax keyword javaScriptIdentifier prototype
-autocmd FileType javascript syntax keyword javaScriptGlobal document exports location navigator
-autocmd FileType javascript syntax keyword javaScriptNothing event parent top self static status
-autocmd FileType javascript syntax keyword javaScriptNull NaN
-autocmd FileType javascript syntax keyword javaScriptReserved void
+autocmd FileType javascript syntax keyword javaScriptGlobal document exports
 autocmd FileType javascript syntax keyword javaScriptMessage console
+autocmd FileType javascript syntax keyword javaScriptNothing abstract boolean byte char class const double enum event export extends final float goto implements import int interface location long native package parent private protected public self short static super synchronized throws top transient volatile
+autocmd FileType javascript syntax keyword javaScriptNull NaN
+autocmd FileType javascript syntax keyword javaScriptReserved prototype void
+autocmd FileType javascript syntax keyword javaScriptType Float32Array Float64Array Int8Array Int16Array Int32Array Uint8Array Uint16Array Uint32Array
+autocmd FileType javascript highlight link javaScriptGlobal javaScriptType
 autocmd FileType javascript highlight link javaScriptMessage PreProc
-autocmd FileType javascript highlight link javaScriptNull Function
+autocmd FileType javascript highlight link javaScriptNull Boolean
 autocmd FileType javascript highlight link javaScriptNumber Number
 autocmd FileType python syntax keyword pythonBoolean True False
 autocmd FileType python highlight link pythonBoolean Number
@@ -44,7 +45,6 @@ highlight BadWhitespace ctermbg=1
 highlight Error cterm=none
 highlight ErrorMsg cterm=none
 highlight IncSearch ctermbg=0
-highlight javaScriptGlobal ctermfg=3
 highlight MatchParen ctermfg=none ctermbg=none cterm=underline
 highlight NonText ctermfg=8
 highlight Search ctermbg=0
