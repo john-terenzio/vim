@@ -20,7 +20,7 @@ autocmd BufReadPost * execute "normal! `\""
 
 " Syntax highlighting
 syntax enable
-autocmd FileType c,javascript,ruby,php,python setlocal colorcolumn=80
+autocmd FileType c,coffee,javascript,ruby,php,python setlocal colorcolumn=80
 autocmd BufReadPost * match BadWhitespace /\s\+$/
 autocmd InsertEnter * match BadWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match BadWhitespace /\s\+$/
