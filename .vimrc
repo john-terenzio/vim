@@ -2,7 +2,7 @@
 
 " Main behavior
 filetype plugin indent on
-set directory=~/.vim/tmp
+set directory=$HOME/.vim/tmp/
 set encoding=utf-8
 set hidden
 set laststatus=2
@@ -12,7 +12,7 @@ set number
 set statusline=%f[%{&ff}]%y%r%m%=\ %c,%l/%L\ %P
 set termencoding=utf-8
 set title
-set viminfo+=n~/.vim/viminfo
+set viminfo+=n$HOME/.vim/viminfo
 set wildmenu
 
 " Jump to last position when reopening a file
@@ -20,7 +20,7 @@ autocmd BufReadPost * execute "normal! `\""
 
 " Syntax highlighting
 syntax enable
-autocmd FileType c,coffee,javascript,ruby,php,python setlocal colorcolumn=80
+set colorcolumn=80
 autocmd BufReadPost * match BadWhitespace /\s\+$/
 autocmd InsertEnter * match BadWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match BadWhitespace /\s\+$/
@@ -41,6 +41,7 @@ highlight StatusLine cterm=none
 highlight StatusLineNC cterm=none
 highlight VertSplit ctermfg=8 ctermbg=8
 highlight Visual ctermbg=0
+"highlight Visual ctermbg=14, ctermfg=0
 highlight WarningMsg ctermfg=3 cterm=none
 
 " Syntax highlighting tweaks
@@ -89,7 +90,7 @@ nmap k gk
 let g:ctrlp_cache_dir = $HOME.'/.vim/tmp/ctrlp'
 let g:ctrlp_lazy_update = 100
 let g:ctrlp_max_height = 20
-let g:ctrlp_user_command = 'find %s -type f | grep -i -v -P "(\.(eot|gif|gz|ico|jpg|jpeg|otf|png|psd|pyc|svg|ttf|woff|zip)$)|(/\.)|((^|\/)tmp\/)"'
+let g:ctrlp_user_command = 'find %s -type f | egrep -iv "(\.(eot|gif|gz|ico|jpg|jpeg|otf|png|psd|pyc|svg|ttf|woff|zip)$)|(/\.)|((^|\/)tmp\/)"'
 let g:ctrlp_working_path_mode = 0
 
 " NERDTree settings

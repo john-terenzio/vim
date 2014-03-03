@@ -8,7 +8,7 @@ endif
 autocmd FileType javascript syntax keyword javaScriptGlobal document exports JSON
 autocmd FileType javascript syntax keyword javaScriptIdentifier const
 autocmd FileType javascript syntax keyword javaScriptMessage console
-autocmd FileType javascript syntax keyword javaScriptNothing abstract boolean byte char class double enum event export extends final float goto implements import int interface location long native package parent private protected public self short static super synchronized throws top transient volatile
+autocmd FileType javascript syntax keyword javaScriptNothing abstract boolean byte char class double enum event export extends final float goto implements import int interface location long native package parent private protected public self short static status super synchronized throws top transient volatile
 autocmd FileType javascript syntax keyword javaScriptNull Infinity NaN
 autocmd FileType javascript syntax keyword javaScriptReserved prototype void
 autocmd FileType javascript syntax keyword javaScriptType Error EvalError RangeError ReferenceError SyntaxError TypeError URIError
