@@ -36,12 +36,11 @@ highlight IncSearch ctermbg=0
 highlight MatchParen ctermfg=none ctermbg=none cterm=underline
 highlight NonText ctermfg=8
 highlight Search ctermbg=0
-highlight SpecialKey ctermfg=8 ctermbg=none
+highlight SpecialKey ctermfg=0 ctermbg=none
 highlight StatusLine cterm=none
 highlight StatusLineNC cterm=none
 highlight VertSplit ctermfg=8 ctermbg=8
 highlight Visual ctermbg=0
-"highlight Visual ctermbg=14, ctermfg=0
 highlight WarningMsg ctermfg=3 cterm=none
 
 " Syntax highlighting tweaks
