@@ -11,7 +11,6 @@ set listchars=tab:▸\ ,
 set number
 set statusline=%f[%{&ff}]%y%r%m%=\ %c,%l/%L\ %P
 set termencoding=utf-8
-set title
 set viminfo+=n$HOME/.vim/viminfo
 set wildmenu
 
