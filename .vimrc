@@ -42,11 +42,8 @@ highlight VertSplit ctermfg=8 ctermbg=8
 highlight Visual ctermbg=0
 highlight WarningMsg ctermfg=3 cterm=none
 
-" Syntax highlighting tweaks
-let syntax_tweaks = expand('~/.vim/syntax_tweaks.vim')
-if filereadable(syntax_tweaks)
-  execute 'source' syntax_tweaks
-endif
+" Soft wrap text files
+autocmd FileType text set colorcolumn= linebreak wrap
 
 " Indentation
 set autoindent
