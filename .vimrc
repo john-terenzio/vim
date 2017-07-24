@@ -76,7 +76,6 @@ map <leader>4 :setlocal shiftwidth=4<CR>:setlocal tabstop=4<CR>:setlocal softtab
 map <leader>n :nohl<CR>
 map <leader>p :set paste!<CR>
 map <leader>s :shell<CR>
-map <leader>t :tabnew<CR>
 imap <c-p> <nop>
 nmap j gj
 nmap k gk
