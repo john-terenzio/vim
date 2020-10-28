@@ -1,4 +1,19 @@
 " JT's .vimrc
+"
+" Plug
+call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
+Plug 'briancollins/vim-jst'
+Plug 'embear/vim-localvimrc'
+Plug 'kien/ctrlp.vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+call plug#end()
 
 " Main behavior
 filetype plugin indent on
@@ -20,6 +35,8 @@ autocmd BufReadPost * execute "normal! `\""
 " Syntax highlighting
 syntax enable
 set colorcolumn=80
+autocmd FileType java set colorcolumn=91 " Spring
+autocmd FileType ruby set colorcolumn=100
 autocmd BufReadPost * match BadWhitespace /\s\+$/
 autocmd InsertEnter * match BadWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match BadWhitespace /\s\+$/
@@ -93,3 +110,6 @@ let g:NERDTreeDirArrows=0
 
 " Local .vimrc settings
 let g:localvimrc_ask = 0
+
+" Vim JSX settings
+let g:jsx_ext_required = 0
