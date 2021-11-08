@@ -1,4 +1,4 @@
-" JT's .vimrc
+" JT's vimrc
 "
 " Plug
 call plug#begin('~/.vim/plugged')
@@ -103,10 +103,6 @@ let g:ctrlp_lazy_update = 100
 let g:ctrlp_max_height = 20
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_working_path_mode = 0
-
-" NERDTree settings
-map <leader>d :NERDTree<CR>
-let g:NERDTreeDirArrows=0
 
 " Local .vimrc settings
 let g:localvimrc_ask = 0
