@@ -1,7 +1,7 @@
-JT's .vimrc
+JT's vimrc
 ===========
 
-This is my .vimrc. I use a handful of plugins:
+This is my vim configuration. I also use a handful of plugins:
 
 * [Solarized](https://github.com/altercation/vim-colors-solarized)
 * [Ctrl-P](https://github.com/kien/ctrlp.vim)
