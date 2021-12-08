@@ -36,8 +36,6 @@ autocmd BufReadPost * execute "normal! `\""
 " Syntax highlighting
 syntax enable
 set colorcolumn=80
-autocmd FileType java set colorcolumn=91 " Spring
-autocmd FileType go,ruby set colorcolumn=100
 autocmd BufReadPost * match BadWhitespace /\s\+$/
 autocmd InsertEnter * match BadWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match BadWhitespace /\s\+$/
@@ -59,9 +57,6 @@ highlight StatusLineNC cterm=none
 highlight VertSplit ctermfg=8 ctermbg=8
 highlight Visual ctermbg=14 ctermfg=0
 highlight WarningMsg ctermfg=3 cterm=none
-
-" Soft wrap text files
-autocmd FileType text set colorcolumn= linebreak wrap
 
 " Indentation
 set autoindent
@@ -97,6 +92,12 @@ map <leader>s :shell<CR>
 imap <c-p> <nop>
 nmap j gj
 nmap k gk
+
+" File type overrides
+autocmd FileType go,ruby set colorcolumn=100
+autocmd FileType go set noexpandtab
+autocmd FileType java set colorcolumn=91 " Spring
+autocmd FileType text set colorcolumn= linebreak wrap " Soft wrap text files
 
 " Ctrl-P settings
 let g:ctrlp_cache_dir = $HOME.'/.vim/tmp/ctrlp'
