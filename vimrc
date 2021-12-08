@@ -21,7 +21,6 @@ set hidden
 set laststatus=2
 set list
 set listchars=tab:▸\ ,
-set mouse=nvi
 set number
 set shell=/usr/bin/fish
 set statusline=%f[%{&ff}]%y%r%m%=\ %c,%l/%L\ %P
