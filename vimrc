@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'dag/vim-fish'
 Plug 'embear/vim-localvimrc'
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
@@ -88,7 +88,6 @@ map <leader>4 :setlocal shiftwidth=4<CR>:setlocal tabstop=4<CR>:setlocal softtab
 map <leader>n :nohl<CR>
 map <leader>p :set paste!<CR>
 map <leader>s :shell<CR>
-imap <c-p> <nop>
 nmap j gj
 nmap k gk
 
@@ -98,12 +97,8 @@ autocmd FileType go set noexpandtab
 autocmd FileType java set colorcolumn=91 " Spring
 autocmd FileType text set colorcolumn= linebreak wrap " Soft wrap text files
 
-" Ctrl-P settings
-let g:ctrlp_cache_dir = $HOME.'/.vim/tmp/ctrlp'
-let g:ctrlp_lazy_update = 100
-let g:ctrlp_max_height = 20
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_working_path_mode = 0
+" fzf settings
+map <c-p> :FZF<CR>
 
 " Local .vimrc settings
 let g:localvimrc_ask = 0
