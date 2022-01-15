@@ -9,6 +9,7 @@ Plug 'junegunn/fzf'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 call plug#end()
@@ -83,8 +84,6 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 
 " Native shortcuts/mappings
-map <leader>2 :setlocal shiftwidth=2<CR>:setlocal tabstop=2<CR>:setlocal softtabstop=2<CR>
-map <leader>4 :setlocal shiftwidth=4<CR>:setlocal tabstop=4<CR>:setlocal softtabstop=4<CR>
 map <leader>n :nohl<CR>
 map <leader>p :set paste!<CR>
 map <leader>s :shell<CR>
@@ -101,4 +100,6 @@ autocmd FileType text set colorcolumn= linebreak wrap " Soft wrap text files
 map <c-p> :FZF<CR>
 
 " Local .vimrc settings
-let g:localvimrc_ask = 0
+let g:localvimrc_persistence_file = expand('$HOME') . "/.vim/tmp/localvimrc_persistent"
+let g:localvimrc_persistent = 2
+let g:localvimrc_sandbox = 0
