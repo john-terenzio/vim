@@ -92,7 +92,7 @@ nmap k gk
 
 " File type overrides
 autocmd FileType go,ruby set colorcolumn=100
-autocmd FileType go set noexpandtab
+autocmd FileType go set noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd FileType java set colorcolumn=91 " Spring
 autocmd FileType text set colorcolumn= linebreak wrap " Soft wrap text files
 
