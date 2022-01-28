@@ -31,7 +31,7 @@ set wildignorecase
 set wildmenu
 
 " Jump to last position when reopening a file
-autocmd BufReadPost * execute "normal! `\""
+autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"zz" | endif
 
 " Syntax highlighting
 syntax enable
@@ -84,11 +84,17 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 
 " Native shortcuts/mappings
-map <leader>n :nohl<CR>
-map <leader>p :set paste!<CR>
-map <leader>s :shell<CR>
+nmap <leader>n :nohl<CR>
+nmap <leader>s :shell<CR>
 nmap j gj
 nmap k gk
+
+" X11 copy & paste
+if executable("xclip")
+  nmap <leader>p :call setreg("\"", system("xclip -sel clip -o"))<CR>p
+  nmap <leader>P :call setreg("\"", system("xclip -sel clip -o"))<CR>P
+  vmap <leader>y y:call system("xclip -sel clip", getreg("\""))<CR>
+endif
 
 " File type overrides
 autocmd FileType go,ruby set colorcolumn=100
