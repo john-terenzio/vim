@@ -90,10 +90,10 @@ nmap j gj
 nmap k gk
 
 " X11 copy & paste
-if executable("xclip")
-  nmap <leader>p :call setreg("\"", system("xclip -sel clip -o"))<CR>p
-  nmap <leader>P :call setreg("\"", system("xclip -sel clip -o"))<CR>P
-  vmap <leader>y y:call system("xclip -sel clip", getreg("\""))<CR>
+if executable("xsel")
+  nmap <leader>p :call setreg("\"", system("xsel -b -o"))<CR>p
+  nmap <leader>P :call setreg("\"", system("xsel -b -o"))<CR>P
+  vmap <leader>y y:call system("xsel -b -i", getreg("\""))<CR>
 endif
 
 " File type overrides
