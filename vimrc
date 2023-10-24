@@ -24,7 +24,7 @@ set list
 set listchars=tab:▸\ ,
 set mouse=a
 set number
-set shell=/usr/bin/fish
+set shell=fish
 set statusline=%f[%{&ff}]%y%r%m%=\ %c,%l/%L\ %P
 set termencoding=utf-8
 set viminfo+=n$HOME/.vim/viminfo
