@@ -5,7 +5,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'dag/vim-fish'
 Plug 'embear/vim-localvimrc'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
@@ -104,7 +105,9 @@ autocmd FileType java set colorcolumn=91 " Spring
 autocmd FileType text set colorcolumn= linebreak wrap " Soft wrap text files
 
 " fzf settings
-map <c-p> :FZF<CR>
+let g:fzf_vim = {}
+let g:fzf_vim.command_prefix = 'Fzf'
+map <c-p> :FzfFiles<CR>
 
 " Local .vimrc settings
 let g:localvimrc_persistence_file = expand('$HOME') . "/.vim/tmp/localvimrc_persistent"
