@@ -17,7 +17,7 @@ call plug#end()
 
 " Main behavior
 filetype plugin indent on
-set clipboard=unnamed
+" set clipboard=unnamed
 set directory=$HOME/.vim/tmp/
 set encoding=utf-8
 set hidden
@@ -91,6 +91,13 @@ nmap <leader>n :nohl<CR>
 nmap <leader>s :shell<CR>
 nmap j gj
 nmap k gk
+
+" Copy & paste
+if executable("pbcopy") " detect Mac
+  nmap <leader>p "+p
+  nmap <leader>P "+P
+  vmap <leader>y "+y
+endif
 
 " File type overrides
 autocmd FileType go,ruby set colorcolumn=100
