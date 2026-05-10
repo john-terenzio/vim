@@ -17,7 +17,6 @@ call plug#end()
 
 " Main behavior
 filetype plugin indent on
-" set clipboard=unnamed
 set directory=$HOME/.vim/tmp/
 set encoding=utf-8
 set hidden
@@ -93,7 +92,13 @@ nmap j gj
 nmap k gk
 
 " Copy & paste
-if executable("pbcopy") " detect Mac
+if has("gui_macvim")
+  set shell=/bin/zsh
+  autocmd GUIEnter * set clipboard=
+  nmap <leader>p "*p
+  nmap <leader>P "*P
+  vmap <leader>y "*y
+elseif has("mac")
   nmap <leader>p "+p
   nmap <leader>P "+P
   vmap <leader>y "+y
